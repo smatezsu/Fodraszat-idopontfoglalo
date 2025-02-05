@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fodrász időpontfoglaló</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Fodrász időpontfoglaló</h1>
+    <nav>
+      <a href="admin.html">Admin felület</a>
+    </nav>
+  </header>
+
+  <section id="hairdresser-list" class="grid"></section>
+
+  <div id="booking-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h2 id="selected-hairdresser-name"></h2>
+      <form id="booking-form-element">
+        <input type="text" id="customer-name" placeholder="Teljes Név" required>
+        <input type="tel" id="customer-phone" placeholder="Telefonszám" required>
+        <input type="date" id="appointment-date" required>
+
+        <div id="time-slots" class="grid hidden"></div>
+        <select id="service"></select>
+
+        <button type="submit">Lefoglalom</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
